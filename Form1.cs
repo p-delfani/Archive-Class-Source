@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Factorial_addad
+namespace BigNumberBetween3Number
 {
     public partial class Form1 : Form
     {
@@ -19,17 +19,29 @@ namespace Factorial_addad
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int n, i;
+            int a;
+            int b;
+            int c;
 
-            long fact = 1;
-            n = Convert.ToInt32(textBox1.Text);
+            a = Convert.ToInt32(textBox1.Text);
+            b = Convert.ToInt32(textBox2.Text);
+            c = Convert.ToInt32(textBox3.Text);
 
-            for (i = 1; i <= n; i++)
+            if(a>b && a > c)
             {
-                fact = fact * i;
+                label1.Text = "big number is a";
             }
 
-            label1.Text = fact.ToString();
+            else if(b>a && b>c)
+            {
+                label1.Text = "big number is b";
+
+            }
+            else
+            {
+                label1.Text = "big number is c";
+
+            }
         }
     }
 }
